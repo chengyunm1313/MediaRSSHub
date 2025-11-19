@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { RSS_CATEGORIES } from '@/lib/rss-config';
+import { RSS_CATEGORIES, RSS_FEEDS } from '@/lib/rss-config';
 import { Calendar, ExternalLink, Search } from 'lucide-react';
 
 export default function Home() {
@@ -61,6 +61,18 @@ export default function Home() {
           <h1 className="title">AI Tech Nexus</h1>
           <p className="subtitle">匯聚最前沿的 AI 與科技新聞</p>
         </header>
+
+        {/* Supported Sources Section */}
+        <section className="supported-sources">
+          <h3 className="section-title">支援的媒體來源</h3>
+          <div className="sources-grid">
+            {RSS_FEEDS.map((feed) => (
+              <div key={feed.id} className="source-badge">
+                {feed.name}
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* Advanced Controls */}
         <div className="controls">
@@ -158,6 +170,19 @@ export default function Home() {
             ))}
           </div>
         )}
+
+
+
+        {/* Footer */}
+        <footer className="footer">
+          <p className="footer-text">歡迎邀約合作，或直接與我聯絡！</p>
+          <a href="mailto:chengyunm1313@gmail.com" className="footer-email">
+            chengyunm1313@gmail.com
+          </a>
+          <p className="footer-copyright">
+            © 2025 享哥 | AI應用規劃師. All rights reserved.
+          </p>
+        </footer>
       </div>
     </main>
   );

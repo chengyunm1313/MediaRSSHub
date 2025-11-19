@@ -36,6 +36,36 @@ export const RSS_FEEDS = [
     category: RSS_CATEGORIES.TECH,
   },
   {
+    id: 'techorange',
+    name: 'TechOrange 科技報橘',
+    url: 'https://buzzorange.com/techorange/feed/',
+    category: RSS_CATEGORIES.TECH,
+  },
+  {
+    id: 'inside',
+    name: 'INSIDE 硬塞的',
+    url: 'https://www.inside.com.tw/feed',
+    category: RSS_CATEGORIES.TECH,
+  },
+  {
+    id: 'techbang',
+    name: 'T客邦',
+    url: 'https://www.techbang.com/rss/posts',
+    category: RSS_CATEGORIES.TECH,
+  },
+  {
+    id: 'bnext',
+    name: '數位時代',
+    url: 'https://www.bnext.com.tw/rss',
+    category: RSS_CATEGORIES.TECH,
+  },
+  {
+    id: 'meet',
+    name: '創業小聚',
+    url: 'https://meet.bnext.com.tw/rss',
+    category: RSS_CATEGORIES.TECH,
+  },
+  {
     id: 'google-news-tech',
     name: 'Google News (Tech)',
     url: 'https://news.google.com/rss/search?q=%E7%A7%91%E6%8A%80%E6%96%B0%E8%81%9E&hl=zh-TW&gl=TW&ceid=TW:zh-Hant',
@@ -44,6 +74,12 @@ export const RSS_FEEDS = [
 
   // --- AI 自媒體 (生成式工具) ---
   // 包含 AI 生文、生圖、生影片工具
+  {
+    id: 'freegroup',
+    name: '免費資源網路社群',
+    url: 'https://free.com.tw/feed/',
+    category: RSS_CATEGORIES.AI_MEDIA,
+  },
   {
     id: 'google-news-ai-media',
     name: 'AI Media Tools (Google News)',
@@ -60,6 +96,12 @@ export const RSS_FEEDS = [
 
   // --- No-code 自動化 ---
   // n8n, make.com, zapier
+  {
+    id: 'playpc',
+    name: '電腦玩物',
+    url: 'https://www.playpcesor.com/feeds/posts/default',
+    category: RSS_CATEGORIES.AUTOMATION,
+  },
   {
     id: 'google-news-automation',
     name: 'No-code Automation (Google News)',
