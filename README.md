@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Tech Nexus
 
-## Getting Started
+匯聚最前沿的 AI 與科技新聞，為您提供一站式的科技資訊聚合平台。
 
-First, run the development server:
+## ✨ 特色功能
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **多源 RSS 聚合**：整合來自各大科技媒體的最新資訊。
+- **智能分類**：
+  - 🤖 **人工智慧 (AI)**：最新的 AI 模型、工具與研究。
+  - 💻 **綜合科技**：廣泛的科技產業動態。
+  - 🛒 **電商行銷**：電子商務與數位行銷趨勢。
+  - 📱 **自媒體**：創作者經濟與社群媒體新知。
+  - ⚙️ **自動化**：工作流程自動化與效率工具。
+  - 💼 **商業財經**：科技巨頭財報與市場分析。
+- **進階篩選**：
+  - 📅 **日期範圍**：自訂開始與結束日期，回顧特定時段的新聞。
+  - 🔍 **關鍵字搜尋**：快速查找感興趣的主題。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 快速開始 (Getting Started)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 前置需求
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+請確保您的電腦已安裝 [Node.js](https://nodejs.org/) (建議版本 18.0.0 或以上)。
 
-## Learn More
+### 安裝步驟
 
-To learn more about Next.js, take a look at the following resources:
+1.  複製專案到本地：
+    ```bash
+    git clone <repository-url>
+    cd MediaRSSHub
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2.  安裝依賴套件：
+    ```bash
+    npm install
+    # 或使用 yarn
+    yarn install
+    # 或使用 pnpm
+    pnpm install
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3.  啟動開發伺服器：
+    ```bash
+    npm run dev
+    ```
 
-## Deploy on Vercel
+4.  開啟瀏覽器瀏覽 [http://localhost:3000](http://localhost:3000)。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📖 使用說明
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 瀏覽新聞
+進入首頁後，預設顯示所有類別的最新新聞。點擊上方的分類按鈕（如「人工智慧」、「綜合科技」等）即可切換不同主題的新聞列表。
+
+### 搜尋與篩選
+在頁面上方的控制列中，您可以：
+1.  **日期篩選**：選擇「開始日期」與「結束日期」來過濾新聞發布時間。
+2.  **關鍵字搜尋**：在搜尋框輸入關鍵字（例如 "GPT" 或 "Apple"），按下 Enter 或點擊搜尋按鈕即可篩選標題包含該關鍵字的新聞。
+
+## ❓ 常見問答 (FAQ)
+
+**Q: 新聞來源有哪些？**
+A: 我們聚合了多個知名的科技新聞 RSS 來源。具體的來源列表可以在程式碼配置中查看與擴充。
+
+**Q: 新聞更新頻率是多久？**
+A: 系統會在您每次重新整理頁面或切換分類時，即時從 RSS 來源獲取最新資訊。
+
+**Q: 如何新增更多 RSS 來源？**
+A: 開發者可以在專案的配置檔中（通常位於 `src/lib/rss-config.js` 或類似位置）新增 RSS Feed URL。
+
+---
+
+Built with [Next.js](https://nextjs.org) and ❤️.
