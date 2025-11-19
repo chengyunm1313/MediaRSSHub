@@ -109,37 +109,31 @@ export default function Home() {
             className={`filter-btn ${activeCategory === RSS_CATEGORIES.AI ? 'active' : ''}`}
             onClick={() => setActiveCategory(RSS_CATEGORIES.AI)}
           >
-            人工智慧 (AI)
+            AI 人工智慧
           </button>
           <button 
             className={`filter-btn ${activeCategory === RSS_CATEGORIES.TECH ? 'active' : ''}`}
             onClick={() => setActiveCategory(RSS_CATEGORIES.TECH)}
           >
-            綜合科技
+            最新科技
           </button>
           <button 
-            className={`filter-btn ${activeCategory === RSS_CATEGORIES.ECOMMERCE ? 'active' : ''}`}
-            onClick={() => setActiveCategory(RSS_CATEGORIES.ECOMMERCE)}
+            className={`filter-btn ${activeCategory === RSS_CATEGORIES.AI_MEDIA ? 'active' : ''}`}
+            onClick={() => setActiveCategory(RSS_CATEGORIES.AI_MEDIA)}
           >
-            電商行銷
-          </button>
-          <button 
-            className={`filter-btn ${activeCategory === RSS_CATEGORIES.MEDIA ? 'active' : ''}`}
-            onClick={() => setActiveCategory(RSS_CATEGORIES.MEDIA)}
-          >
-            自媒體
+            AI 自媒體 (生成式工具)
           </button>
           <button 
             className={`filter-btn ${activeCategory === RSS_CATEGORIES.AUTOMATION ? 'active' : ''}`}
             onClick={() => setActiveCategory(RSS_CATEGORIES.AUTOMATION)}
           >
-            自動化
+            No-code 自動化
           </button>
           <button 
-            className={`filter-btn ${activeCategory === RSS_CATEGORIES.BUSINESS ? 'active' : ''}`}
-            onClick={() => setActiveCategory(RSS_CATEGORIES.BUSINESS)}
+            className={`filter-btn ${activeCategory === RSS_CATEGORIES.VIBE_CODING ? 'active' : ''}`}
+            onClick={() => setActiveCategory(RSS_CATEGORIES.VIBE_CODING)}
           >
-            商業財經
+            Vibe Coding
           </button>
         </div>
 

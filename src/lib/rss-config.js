@@ -2,13 +2,13 @@ export const RSS_CATEGORIES = {
   ALL: 'all',
   AI: 'ai',
   TECH: 'tech',
-  ECOMMERCE: 'ecommerce', // 電商行銷
-  MEDIA: 'media',         // 自媒體
-  AUTOMATION: 'automation', // 自動化
-  BUSINESS: 'business',   // 商業財經
+  AI_MEDIA: 'ai_media',       // AI 自媒體 (生成式工具)
+  AUTOMATION: 'automation',   // No-code 自動化
+  VIBE_CODING: 'vibe_coding', // Vibe Coding
 };
 
 export const RSS_FEEDS = [
+  // --- AI 人工智慧 ---
   {
     id: 'technews-ai',
     name: 'TechNews AI',
@@ -16,71 +16,24 @@ export const RSS_FEEDS = [
     category: RSS_CATEGORIES.AI,
   },
   {
-    id: 'google-news-bnext',
-    name: '數位時代 (Google News)',
-    url: 'https://news.google.com/rss/search?q=%E6%95%B8%E4%BD%8D%E6%99%82%E4%BB%A3&hl=zh-TW&gl=TW&ceid=TW:zh-Hant',
-    category: RSS_CATEGORIES.BUSINESS,
-  },
-  {
-    id: 'commonwealth',
-    name: '天下雜誌',
-    url: 'https://www.cw.com.tw/RSS/cw_content.xml',
-    category: RSS_CATEGORIES.BUSINESS,
-  },
-  {
-    id: 'google-news-business-weekly',
-    name: '商業周刊 (Google News)',
-    url: 'https://news.google.com/rss/search?q=%E5%95%86%E6%A5%AD%E5%91%A8%E5%88%8A&hl=zh-TW&gl=TW&ceid=TW:zh-Hant',
-    category: RSS_CATEGORIES.BUSINESS,
-  },
-  {
-    id: 'google-news-meet',
-    name: '創業小聚 (Google News)',
-    url: 'https://news.google.com/rss/search?q=%E5%89%B5%E6%A5%AD%E5%B0%8F%E8%81%9A&hl=zh-TW&gl=TW&ceid=TW:zh-Hant',
-    category: RSS_CATEGORIES.BUSINESS,
-  },
-  {
     id: 'ithome-ai',
     name: 'iThome AI',
     url: 'https://www.ithome.com.tw/rss', 
-    category: RSS_CATEGORIES.TECH,
+    category: RSS_CATEGORIES.AI,
   },
-  {
-    id: 'inside',
-    name: 'INSIDE',
-    url: 'https://feeds.feedburner.com/InSide_blog',
-    category: RSS_CATEGORIES.ECOMMERCE, 
-  },
-  {
-    id: 'panx',
-    name: 'PanX 泛科技',
-    url: 'https://panx.asia/feed',
-    category: RSS_CATEGORIES.MEDIA, 
-  },
-  {
-    id: 'technews-business',
-    name: 'TechNews Business',
-    url: 'https://technews.tw/category/business/feed/',
-    category: RSS_CATEGORIES.ECOMMERCE,
-  },
-  {
-    id: 'twreporter',
-    name: '報導者',
-    url: 'https://www.twreporter.org/a/rss2.xml',
-    category: RSS_CATEGORIES.MEDIA,
-  },
-  {
-    id: 'technews-component',
-    name: 'TechNews Component',
-    url: 'https://technews.tw/category/component/feed/',
-    category: RSS_CATEGORIES.AUTOMATION,
-  },
-  // Google News Feeds
   {
     id: 'google-news-ai',
     name: 'Google News (AI)',
     url: 'https://news.google.com/rss/search?q=%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7+AI&hl=zh-TW&gl=TW&ceid=TW:zh-Hant',
     category: RSS_CATEGORIES.AI,
+  },
+
+  // --- 最新科技 ---
+  {
+    id: 'technews-tech',
+    name: 'TechNews 科技',
+    url: 'https://technews.tw/feed/',
+    category: RSS_CATEGORIES.TECH,
   },
   {
     id: 'google-news-tech',
@@ -88,10 +41,40 @@ export const RSS_FEEDS = [
     url: 'https://news.google.com/rss/search?q=%E7%A7%91%E6%8A%80%E6%96%B0%E8%81%9E&hl=zh-TW&gl=TW&ceid=TW:zh-Hant',
     category: RSS_CATEGORIES.TECH,
   },
+
+  // --- AI 自媒體 (生成式工具) ---
+  // 包含 AI 生文、生圖、生影片工具
   {
-    id: 'google-news-ecommerce',
-    name: 'Google News (E-commerce)',
-    url: 'https://news.google.com/rss/search?q=%E9%9B%BB%E5%95%86%E8%A1%8C%E9%8A%B7&hl=zh-TW&gl=TW&ceid=TW:zh-Hant',
-    category: RSS_CATEGORIES.ECOMMERCE,
+    id: 'google-news-ai-media',
+    name: 'AI Media Tools (Google News)',
+    // Query: "AI 生成" OR "Midjourney" OR "Stable Diffusion" OR "Runway" OR "Sora" OR "ChatGPT" OR "Claude"
+    url: 'https://news.google.com/rss/search?q=AI+%E7%94%9F%E6%88%90+OR+Midjourney+OR+%22Stable+Diffusion%22+OR+Runway+OR+Sora+OR+ChatGPT+OR+Claude&hl=zh-TW&gl=TW&ceid=TW:zh-Hant',
+    category: RSS_CATEGORIES.AI_MEDIA,
+  },
+  {
+    id: 'panx',
+    name: 'PanX 泛科技',
+    url: 'https://panx.asia/feed',
+    category: RSS_CATEGORIES.AI_MEDIA, 
+  },
+
+  // --- No-code 自動化 ---
+  // n8n, make.com, zapier
+  {
+    id: 'google-news-automation',
+    name: 'No-code Automation (Google News)',
+    // Query: "n8n" OR "make.com" OR "zapier" OR "no-code" OR "automation"
+    url: 'https://news.google.com/rss/search?q=n8n+OR+make.com+OR+zapier+OR+no-code+OR+automation&hl=zh-TW&gl=TW&ceid=TW:zh-Hant',
+    category: RSS_CATEGORIES.AUTOMATION,
+  },
+
+  // --- Vibe Coding ---
+  // Cursor, Windsurf, Aider, AI Coding
+  {
+    id: 'google-news-vibe-coding',
+    name: 'Vibe Coding (Google News)',
+    // Query: "Cursor AI" OR "Windsurf" OR "Aider" OR "AI coding"
+    url: 'https://news.google.com/rss/search?q=%22Cursor+AI%22+OR+Windsurf+OR+Aider+OR+%22AI+coding%22&hl=zh-TW&gl=TW&ceid=TW:zh-Hant',
+    category: RSS_CATEGORIES.VIBE_CODING,
   },
 ];
