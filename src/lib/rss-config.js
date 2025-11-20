@@ -44,19 +44,20 @@ export const RSS_FEEDS = [
   {
     id: 'inside',
     name: 'INSIDE 硬塞的',
-    url: 'https://www.inside.com.tw/feed',
+    url: 'https://www.inside.com.tw/feed/rss',
     category: RSS_CATEGORIES.TECH,
   },
   {
     id: 'techbang',
     name: 'T客邦',
-    url: 'https://www.techbang.com/rss/posts',
+    url: 'https://feeds.feedburner.com/techbang/daily',
     category: RSS_CATEGORIES.TECH,
   },
   {
     id: 'bnext',
     name: '數位時代',
-    url: 'https://www.bnext.com.tw/rss',
+    // url: 'https://www.bnext.com.tw/rss', // 404 Not Found
+    url: 'https://news.google.com/rss/search?q=site:bnext.com.tw&hl=zh-TW&gl=TW&ceid=TW:zh-Hant',
     category: RSS_CATEGORIES.TECH,
   },
   {
@@ -90,7 +91,8 @@ export const RSS_FEEDS = [
   {
     id: 'panx',
     name: 'PanX 泛科技',
-    url: 'https://panx.asia/feed',
+    // url: 'https://panx.asia/feed', // 503 Service Unavailable
+    url: 'https://news.google.com/rss/search?q=site:panx.asia&hl=zh-TW&gl=TW&ceid=TW:zh-Hant',
     category: RSS_CATEGORIES.AI_MEDIA, 
   },
 
