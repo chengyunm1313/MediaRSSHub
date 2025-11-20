@@ -10,14 +10,7 @@ export async function GET(request) {
   const endDate = searchParams.get('endDate');
   const keyword = searchParams.get('keyword');
 
-  const parser = new Parser({
-    requestOptions: {
-      rejectUnauthorized: false,
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-      }
-    }
-  });
+  const parser = new Parser();
   
   // Filter feeds based on category
   const targetFeeds = category === RSS_CATEGORIES.ALL
@@ -27,7 +20,21 @@ export async function GET(request) {
   try {
     const feedPromises = targetFeeds.map(async (feedConfig) => {
       try {
-        const feed = await parser.parseURL(feedConfig.url);
+        const response = await fetch(feedConfig.url, {
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+          },
+          signal: AbortSignal.timeout(10000), // 10s timeout
+        });
+
+        if (!response.ok) {
+          console.error(`Failed to fetch ${feedConfig.name}: ${response.status} ${response.statusText}`);
+          return [];
+        }
+
+        const xml = await response.text();
+        const feed = await parser.parseString(xml);
+
         return feed.items.map(item => ({
           title: item.title,
           link: item.link,
